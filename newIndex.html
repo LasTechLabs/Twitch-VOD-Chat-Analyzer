@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Twitch Vod Analyzer</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="newIndex.css">
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script src="https://kit.fontawesome.com/ffa8727b5c.js"></script>
+
+    <!-- showing axes without gridlines didn't work using chartjs most recent version, 2.8.0 works as expected-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+</head>
+
+<body>
+    <div class="outerWrapper">
+        <div class="innerWrapper">
+            <span class="stickyHeader">
+                <div class="mainTitle" style="margin-right: 10px; ">Twitch VOD Chat Analyzer</div>
+                <div class="subTitle"> &bull; Made by LasTech Labs &bull; <a href="https://www.twitter.com/LasTechLabs" target="_blank"><i class="fab fa-twitter"></i> @LasTechLabs</a> &bull; <a href="https://www.github.com/lastechlabs" target="_blank"><i class="fab fa-github"></i> LasTechLabs</a> &bull;</div>
+            </span>
+            <div class="subHeader">
+                <div>
+                    <input class="initInput" type="number" id="vodID" placeholder="VOD ID e.g. 815530355">
+                </div>
+                <div>
+                    <input class="initInput" type="text" id="filterString" size="50"
+                        placeholder="Count messages containing A or B e.g. PogChamp,LUL,Kappa">
+                </div>
+                <div>
+                    <button id="GOBTN">Go</button>
+                </div>
+            </div>
+            <div class="subHeader loading"><span>
+                    <div class="loader"></div>
+                </span>Loading Data. This may take a few minutes (longer vods take longer to process).</div>
+            <div class="ttvEmbed" id="ttvEmbed"></div>
+            <div class="subHeader_2">
+                <div>Number of messages.<span><input type="number" class="numberMessages" min="1" value="60" size="5" id="numMessages"></span>second window.</div>
+            </div>
+            <canvas id="myChart" class="chart"></canvas>
+            <div class="subHeader_2">
+                <div>% change in messages in most recent 10s compared to preceeding 50s</div>
+            </div>
+
+            <canvas id="myChart2" class="chart"></canvas>
+        </div>
+    </div>
+    
+    <script src="newIndex.js"></script>
+</body>
+
+</html>

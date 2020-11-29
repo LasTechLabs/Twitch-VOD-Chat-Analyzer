@@ -1,0 +1,14 @@
+{
+  "name": "twitch_vod-chat_analyzer",
+  "version": "1.0.0",
+  "description": "A very rough tool to visualise the chat over the course of a Twitch.tv VOD",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LasTechLabs",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  }
+}
