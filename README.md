@@ -1,7 +1,10 @@
 # Twitch VOD Chat Analyzer
+
 Twitch VOD Chat Analyzer is a fast-and-dirty tool to visualise the chat activity in a twitch stream, over the course of that stream. It is built upon [Freaktechnik's "twitch-chatlog" package](https://www.npmjs.com/package/twitch-chatlog).
+
 ## Demo
-![](https://i.imgur.com/QAnnrwK.gif)
+![](https://i.imgur.com/CqKg8lO.gif)
+
 ## Installation
 1. Install [twitch-chatlog](https://www.npmjs.com/package/twitch-chatlog) globally: 
 ```npm install -g twitch-chatlog```
